@@ -16,20 +16,20 @@
         overflow-x: hidden;
     }
     h1 {
-        @apply text-4xl sm: text-5xl md: text-6xl lg: text-7xl xl: text-8xl font-bold leading-tight;
+        @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight;
     }
     h2 {
-        @apply text-3xl sm: text-4xl md: text-5xl lg: text-6xl font-bold leading-tight;
+        @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
     }
     h3 {
-        @apply text-2xl sm: text-3xl md: text-4xl font-bold leading-tight;
+        @apply text-2xl sm:text-3xl md:text-4xl font-bold leading-tight;
     }
     h4 {
-        @apply text-xl sm: text-2xl font-semibold leading-snug;
+        @apply text-xl sm:text-2xl font-semibold leading-snug;
     }
     h5,
     h6 {
-        @apply text-lg sm: text-xl font-semibold leading-snug;
+        @apply text-lg sm:text-xl font-semibold leading-snug;
     }
     h1,
     h2,
@@ -41,7 +41,7 @@
         @apply text-primary;
     }
     p {
-        @apply text-base sm: text-lg leading-relaxed;
+        @apply text-base sm:text-lg leading-relaxed;
     }
     /* Custom scrollbar */
      ::-webkit-scrollbar {
@@ -75,44 +75,44 @@
     }
     /* Spacing utilities for responsive padding */
     .px-safe {
-        @apply px-4 sm: px-6 md: px-8;
+        @apply px-4 sm:px-6 md:px-8;
     }
     .py-safe {
-        @apply py-6 sm: py-8 md: py-12;
+        @apply py-6 sm:py-8 md:py-12;
     }
     .p-safe {
-        @apply p-4 sm: p-6 md: p-8;
+        @apply p-4 sm:p-6 md:p-8;
     }
     /* Section spacing */
     .section-spacing {
-        @apply py-12 sm: py-16 md: py-20 lg: py-24;
+        @apply py-12 sm:py-16 md:py-20 lg:py-24;
     }
     .section-spacing-lg {
-        @apply py-16 sm: py-24 md: py-32 lg: py-40;
+        @apply py-16 sm:py-24 md:py-32 lg:py-40;
     }
     /* Gap utilities for responsive grid */
     .gap-safe {
-        @apply gap-4 sm: gap-5 md: gap-6 lg: gap-8;
+        @apply gap-4 sm:gap-5 md:gap-6 lg:gap-8;
     }
     .gap-tight {
-        @apply gap-2 sm: gap-3 md: gap-4;
+        @apply gap-2 sm:gap-3 md:gap-4;
     }
     /* Responsive button base */
     .btn-base {
         @apply inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-300;
     }
     .btn-primary {
-        @apply btn-base px-6 py-3 sm: px-8 sm: py-4 bg-primary text-dark-bg hover: bg-primary-light hover: shadow-lg;
+        @apply btn-base px-6 py-3 sm:px-8 sm:py-4 bg-primary text-dark-bg hover:bg-primary-light hover:shadow-lg;
     }
     .btn-secondary {
-        @apply btn-base px-6 py-3 sm: px-8 sm: py-4 border-2 border-primary text-primary hover: bg-primary hover: text-dark-bg;
+        @apply btn-base px-6 py-3 sm:px-8 sm:py-4 border-2 border-primary text-primary hover:bg-primary hover:text-dark-bg;
     }
     /* Card utilities */
     .card {
         @apply rounded-xl bg-dark-card border border-dark-border transition-all duration-300;
     }
     .card-hover {
-        @apply card hover: border-primary/50 hover: shadow-lg hover: shadow-primary/20;
+        @apply card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20;
     }
     /* Text utilities */
     .text-truncate-2 {
@@ -130,14 +130,14 @@
     }
     /* Focus states for accessibility */
     .focus-visible-ring {
-        @apply focus-visible: outline-none focus-visible: ring-2 focus-visible: ring-primary focus-visible: ring-offset-2 focus-visible: ring-offset-dark-bg;
+        @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-dark-bg;
     }
     /* Responsive visibility */
     .hide-mobile {
-        @apply hidden md: block;
+        @apply hidden md:block;
     }
     .show-mobile {
-        @apply block md: hidden;
+        @apply block md:hidden;
     }
 }
 
@@ -165,10 +165,10 @@
     }
     /* Responsive margin utilities */
     .mx-safe {
-        @apply mx-4 sm: mx-6 md: mx-8;
+        @apply mx-4 sm:mx-6 md:mx-8;
     }
     .my-safe {
-        @apply my-6 sm: my-8 md: my-12;
+        @apply my-6 sm:my-8 md:my-12;
     }
     /* Responsive width utilities */
     .w-safe {
