@@ -1,0 +1,23 @@
+{
+    "name": "Emirates Cuisine",
+    "short_name": "Emirates",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#0b0b0b",
+    "theme_color": "#d4af37",
+    "description": "Emirates Cuisine — authentic Arabic, Pakistani, and Continental flavors.",
+    "icons": [{
+            "src": "/logo/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/logo/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["food", "restaurant", "delivery", "cuisine"]
+}
