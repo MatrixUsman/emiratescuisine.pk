@@ -41,14 +41,14 @@ export default function OpeningHours() {
         {openingHours.map((schedule, index) => (
           <div
             key={schedule.day}
-            className={`group flex items-center justify-between rounded-lg px-3 py-2 sm:py-2.5 transition-all duration-500 hover:translate-x-1 hover:scale-[1.02] text-sm sm:text-base ${
+            className={`group flex items-center justify-between rounded-lg px-3 py-2 sm:py-2.5 transition-all duration-200 hover:translate-x-1 hover:scale-[1.02] text-sm sm:text-base ${
               index === currentDayIndex
                 ? "bg-primary/10 border border-primary/30 shadow-[0_0_15px_rgba(212,175,55,0.2)]"
                 : "bg-dark-surface border border-transparent hover:border-primary/20 hover:bg-dark-card"
             }`}
           >
             <span
-              className={`font-medium transition-all duration-500 ${
+              className={`font-medium transition-all duration-200 ${
                 index === currentDayIndex 
                   ? "text-primary" 
                   : "text-white group-hover:text-primary"
@@ -62,7 +62,7 @@ export default function OpeningHours() {
               )}
             </span>
             <span
-              className={`text-xs sm:text-sm font-medium transition-all duration-500 ${
+              className={`text-xs sm:text-sm font-medium transition-all duration-200 ${
                 index === currentDayIndex 
                   ? "text-primary" 
                   : "text-dark-muted group-hover:text-primary"

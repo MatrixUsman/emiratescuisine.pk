@@ -32,21 +32,21 @@ export default function Footer() {
                 href={contactInfo.socialMedia.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-dark-card border border-dark-border text-white transition-all duration-500 hover:border-primary hover:text-primary hover:bg-primary/10 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-110 hover:rotate-3"
+                className="group relative flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-dark-card border border-dark-border text-white transition-all duration-200 hover:border-primary hover:text-primary hover:bg-primary/10 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-110 hover:rotate-3"
                 aria-label="Follow on Instagram"
               >
-                <Instagram className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 rounded-full bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md -z-10" />
+                <Instagram className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-200 group-hover:scale-110" />
+                <div className="absolute inset-0 rounded-full bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 blur-md -z-10" />
               </a>
               <a
                 href={contactInfo.socialMedia.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-dark-card border border-dark-border text-white transition-all duration-500 hover:border-primary hover:text-primary hover:bg-primary/10 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-110 hover:-rotate-3"
+                className="group relative flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-dark-card border border-dark-border text-white transition-all duration-200 hover:border-primary hover:text-primary hover:bg-primary/10 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-110 hover:-rotate-3"
                 aria-label="Follow on Facebook"
               >
-                <Facebook className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 rounded-full bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md -z-10" />
+                <Facebook className="h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-200 group-hover:scale-110" />
+                <div className="absolute inset-0 rounded-full bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 blur-md -z-10" />
               </a>
               <a
                 href={contactInfo.socialMedia.tiktok}

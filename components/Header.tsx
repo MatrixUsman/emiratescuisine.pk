@@ -21,7 +21,7 @@ export default function Header() {
       <nav className="container mx-auto flex h-16 sm:h-20 items-center justify-between px-safe">
         <Link
           href="/"
-          className="group flex items-center gap-2 sm:gap-3 transition-all duration-500 hover:scale-105 flex-shrink-0"
+          className="group flex items-center gap-2 sm:gap-3 transition-all duration-200 hover:scale-105 flex-shrink-0"
         >
           <div className="relative h-10 w-10 sm:h-12 sm:w-12">
             <Image
@@ -35,10 +35,10 @@ export default function Header() {
             />
           </div>
           <div className="hidden sm:flex flex-col">
-            <span className="font-display text-lg sm:text-xl font-bold text-primary leading-tight transition-all duration-500 group-hover:text-primary-light">
+            <span className="font-display text-lg sm:text-xl font-bold text-primary leading-tight transition-all duration-200 group-hover:text-primary-light">
               emirates
             </span>
-            <span className="text-xs text-dark-muted uppercase tracking-wider transition-all duration-500 group-hover:text-primary/70">
+            <span className="text-xs text-dark-muted uppercase tracking-wider transition-all duration-200 group-hover:text-primary/70">
               cuisine
             </span>
           </div>
@@ -58,8 +58,8 @@ export default function Header() {
                 className="relative text-sm md:text-base font-medium text-white transition-all duration-300 hover:text-primary group"
               >
                 <span className="relative z-10">{item.label}</span>
-                <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-primary-light transition-all duration-500 group-hover:w-full" />
-                <span className="absolute inset-0 bg-primary/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary to-primary-light transition-all duration-200 group-hover:w-full" />
+                <span className="absolute inset-0 bg-primary/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 -z-10" />
               </Link>
             </motion.div>
           ))}
@@ -70,17 +70,17 @@ export default function Header() {
             transition={{ delay: 0.4, duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group relative flex items-center gap-2 overflow-hidden rounded-lg bg-primary/10 border border-primary/30 px-4 py-2 text-sm font-medium text-primary transition-all duration-300 hover:bg-primary hover:text-dark-bg hover:border-primary hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+            className="group relative flex items-center gap-2 overflow-hidden rounded-lg bg-primary/10 border border-primary/30 px-4 py-2 text-sm font-medium text-primary transition-all duration-200 hover:bg-primary hover:text-dark-bg hover:border-primary hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
           >
-            <Phone className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" />
+            <Phone className="h-4 w-4 transition-transform duration-200 group-hover:scale-110 group-hover:rotate-12" />
             <span className="relative z-10">Call Now</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
           </motion.a>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white hover:text-primary transition-colors duration-300 p-2 -mr-2"
+          className="md:hidden text-white hover:text-primary transition-colors duration-200 p-2 -mr-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -113,10 +113,10 @@ export default function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="group relative block rounded-lg px-4 py-3 text-sm sm:text-base font-medium text-white transition-all duration-500 hover:bg-dark-card hover:text-primary"
+                    className="group relative block rounded-lg px-4 py-3 text-sm sm:text-base font-medium text-white transition-all duration-200 hover:bg-dark-card hover:text-primary"
                   >
                     <span className="relative z-10">{item.label}</span>
-                    <span className="absolute left-0 top-0 h-full w-0 bg-primary/10 rounded-lg transition-all duration-500 group-hover:w-full" />
+                    <span className="absolute left-0 top-0 h-full w-0 bg-primary/10 rounded-lg transition-all duration-200 group-hover:w-full" />
                   </Link>
                 </motion.div>
               ))}
@@ -128,11 +128,11 @@ export default function Header() {
                 <a
                   href={`tel:${contactInfo.phone.primary.replace(/\s/g, "")}`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="group relative flex items-center gap-2 overflow-hidden rounded-lg bg-primary/10 border border-primary/30 px-4 py-3 text-sm sm:text-base font-medium text-primary transition-all duration-500 hover:bg-primary hover:text-dark-bg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                  className="group relative flex items-center gap-2 overflow-hidden rounded-lg bg-primary/10 border border-primary/30 px-4 py-3 text-sm sm:text-base font-medium text-primary transition-all duration-200 hover:bg-primary hover:text-dark-bg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
                 >
-                  <Phone className="h-4 w-4 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12 flex-shrink-0" />
+                  <Phone className="h-4 w-4 transition-transform duration-200 group-hover:scale-110 group-hover:rotate-12 flex-shrink-0" />
                   <span className="relative z-10">Call Now</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </a>
               </motion.div>
             </div>

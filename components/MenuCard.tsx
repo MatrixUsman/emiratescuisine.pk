@@ -84,14 +84,16 @@ export default function MenuCard({ item, categoryId, index }: MenuCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.05, ease: "easeOut" }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className="group relative overflow-hidden rounded-lg sm:rounded-xl bg-dark-card border border-dark-border shadow-lg transition-all duration-500 ease-out hover:border-primary/50 hover:shadow-[0_20px_40px_rgba(212,175,55,0.4)] flex flex-col h-full"
+      className="motion-card group relative overflow-hidden rounded-lg sm:rounded-xl bg-dark-card border border-dark-border shadow-lg transition-all duration-200 ease-out hover:border-primary/50 hover:shadow-[0_20px_40px_rgba(212,175,55,0.4)] flex flex-col h-full"
+      style={{ animationDelay: `${index * 50}ms` }}
     >
       {/* Glow effect on hover */}
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-200 -z-10" />
       
       {/* Image Container */}
       <div className="relative h-40 sm:h-48 md:h-52 w-full overflow-hidden flex-shrink-0">
@@ -99,7 +101,7 @@ export default function MenuCard({ item, categoryId, index }: MenuCardProps) {
           src={imageUrl}
           alt={item.name}
           fill
-          className="object-cover transition-all duration-700 ease-out group-hover:scale-115 group-hover:brightness-110"
+          className="object-cover transition-all duration-300 ease-out group-hover:scale-115 group-hover:brightness-110"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 33vw, 25vw"
           quality={85}
           priority={index < 3}
@@ -111,7 +113,7 @@ export default function MenuCard({ item, categoryId, index }: MenuCardProps) {
           }}
           onLoad={() => setImageLoading(false)}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-opacity duration-500 group-hover:from-black/70 group-hover:via-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-opacity duration-200 group-hover:from-black/70 group-hover:via-black/30" />
         
         {/* Spicy Badge */}
         {item.spicy && (
@@ -126,17 +128,17 @@ export default function MenuCard({ item, categoryId, index }: MenuCardProps) {
         )}
 
         {/* Item Name Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 transform transition-transform duration-500 group-hover:translate-y-0 translate-y-1">
-          <h3 className="font-display text-lg sm:text-xl font-bold text-white drop-shadow-2xl transition-all duration-500 group-hover:text-primary group-hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.8)] line-clamp-2">
+        <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 transform transition-transform duration-200 group-hover:translate-y-0 translate-y-1">
+          <h3 className="font-display text-lg sm:text-xl font-bold text-white drop-shadow-2xl transition-all duration-200 group-hover:text-primary group-hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.8)] line-clamp-2">
             {item.name}
           </h3>
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex-1 p-3 sm:p-4 md:p-5 bg-dark-card transition-colors duration-500 group-hover:bg-dark-surface flex flex-col">
+      <div className="flex-1 p-3 sm:p-4 md:p-5 bg-dark-card transition-colors duration-200 group-hover:bg-dark-surface flex flex-col">
         {item.description && (
-          <p className="mb-3 sm:mb-4 line-clamp-2 text-xs sm:text-sm text-dark-muted leading-relaxed transition-colors duration-500 group-hover:text-white/80">
+          <p className="mb-3 sm:mb-4 line-clamp-2 text-xs sm:text-sm text-dark-muted leading-relaxed transition-colors duration-200 group-hover:text-white/80">
             {item.description}
           </p>
         )}
@@ -147,10 +149,10 @@ export default function MenuCard({ item, categoryId, index }: MenuCardProps) {
             <>
               {priceDisplay.type === "single" && (
                 <div className="flex items-center justify-between group/price">
-                  <span className="text-xs font-medium text-dark-muted uppercase tracking-wider transition-colors duration-500 group-hover:text-primary/70">Price</span>
+                  <span className="text-xs font-medium text-dark-muted uppercase tracking-wider transition-colors duration-200 group-hover:text-primary/70">Price</span>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-2xl font-bold text-primary transition-all duration-500 group-hover/price:scale-110">Rs.</span>
-                    <span className="text-2xl font-bold text-white transition-all duration-500 group-hover/price:text-primary group-hover/price:scale-105">
+                    <span className="text-2xl font-bold text-primary transition-all duration-200 group-hover/price:scale-110">Rs.</span>
+                    <span className="text-2xl font-bold text-white transition-all duration-200 group-hover/price:text-primary group-hover/price:scale-105">
                       {priceDisplay.value}
                     </span>
                     <span className="text-sm text-dark-muted">/-</span>
