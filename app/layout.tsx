@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,22 +6,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import StructuredData from "@/components/StructuredData";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import BackToTop from "@/components/BackToTop";
-import { Inter, Poppins } from "next/font/google";
 import { siteConfig, generateKeywords, generateRestaurantSchema } from "@/lib/seo";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
 
 /**
  * Root Layout with Comprehensive SEO
@@ -94,12 +79,15 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
   },
   manifest: "/manifest.json",
-  themeColor: "#0b0b0b",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0b0b0b",
 };
 
 export default function RootLayout({
@@ -110,7 +98,7 @@ export default function RootLayout({
   const restaurantSchema = generateRestaurantSchema();
 
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en">
       <head>
         <StructuredData restaurantSchema={JSON.stringify(restaurantSchema)} />
       </head>
