@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
+    output: "export",
     images: {
         // Enable Next.js Image optimization for automatic format conversion
         unoptimized: true,
