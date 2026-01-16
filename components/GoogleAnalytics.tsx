@@ -17,7 +17,7 @@ import Script from "next/script";
  * For production, set NEXT_PUBLIC_GA_ID environment variable in Vercel/Cloudflare
  */
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "G-5DMJ6Q0NDY";
 
 export default function GoogleAnalytics() {
   if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === "G-XXXXXXXXXX") {
