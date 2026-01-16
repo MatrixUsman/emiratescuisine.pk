@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    reactStrictMode: true,
+    compress: true,
+    swcMinify: true,
+    poweredByHeader: false,
+    modularizeImports: {
+        "lucide-react": {
+            transform: "lucide-react/dist/esm/icons/{{member}}",
+        },
+    },
     images: {
         // Enable Next.js Image optimization for automatic format conversion
         unoptimized: false,

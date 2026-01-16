@@ -21,6 +21,7 @@ export default function Header() {
       <nav className="container mx-auto flex h-16 sm:h-20 items-center justify-between px-safe">
         <Link
           href="/"
+          prefetch
           className="group flex items-center gap-2 sm:gap-3 transition-all duration-200 hover:scale-105 flex-shrink-0"
         >
           <div className="relative h-10 w-10 sm:h-12 sm:w-12">
@@ -55,6 +56,7 @@ export default function Header() {
             >
               <Link
                 href={item.href}
+                prefetch
                 className="relative text-sm md:text-base font-medium text-white transition-all duration-300 hover:text-primary group"
               >
                 <span className="relative z-10">{item.label}</span>
@@ -112,6 +114,7 @@ export default function Header() {
                 >
                   <Link
                     href={item.href}
+                    prefetch
                     onClick={() => setMobileMenuOpen(false)}
                     className="group relative block rounded-lg px-4 py-3 text-sm sm:text-base font-medium text-white transition-all duration-200 hover:bg-dark-card hover:text-primary"
                   >

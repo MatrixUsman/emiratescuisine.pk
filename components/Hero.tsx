@@ -55,6 +55,7 @@ export default function Hero() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
               <Link
                 href="/menu"
+                prefetch
                 className="group relative flex items-center justify-center gap-2 overflow-hidden rounded-lg bg-gradient-to-r from-primary to-primary-dark px-6 sm:px-8 py-3 sm:py-4 font-semibold text-dark-bg transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.6)] w-full sm:w-auto"
               >
                 <span className="relative z-10 transition-all duration-300">View Menu</span>
@@ -66,6 +67,7 @@ export default function Hero() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
               <Link
                 href="/branches"
+                prefetch
                 className="group relative flex items-center justify-center overflow-hidden rounded-lg border-2 border-primary bg-transparent px-6 sm:px-8 py-3 sm:py-4 font-semibold text-primary transition-all duration-500 hover:bg-primary hover:text-dark-bg hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:border-primary-light w-full sm:w-auto"
               >
                 <span className="relative z-10">Find Us</span>
