@@ -64,7 +64,7 @@ export default function MenuPage() {
   return (
     <>
       <StructuredData menuItems={JSON.stringify(menuItemSchemas)} />
-      <div className="pt-8">
+      <div className="pt-6 sm:pt-8">
         <MenuSection />
       </div>
     </>

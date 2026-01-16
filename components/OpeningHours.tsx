@@ -76,21 +76,3 @@ export default function OpeningHours() {
     </div>
   );
 }
-                </span>
-              )}
-            </span>
-            <span
-              className={`text-sm transition-all duration-500 ${
-                index === currentDayIndex 
-                  ? "text-primary font-semibold" 
-                  : "text-dark-muted group-hover:text-primary/80"
-              }`}
-            >
-              {schedule.hours}
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}

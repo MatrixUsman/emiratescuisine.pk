@@ -88,20 +88,22 @@ export default function MenuCard({ item, categoryId, index }: MenuCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.05, ease: "easeOut" }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className="group relative overflow-hidden rounded-xl bg-dark-card border border-dark-border shadow-lg transition-all duration-500 ease-out hover:border-primary/50 hover:shadow-[0_20px_40px_rgba(212,175,55,0.4)]"
+      className="group relative overflow-hidden rounded-lg sm:rounded-xl bg-dark-card border border-dark-border shadow-lg transition-all duration-500 ease-out hover:border-primary/50 hover:shadow-[0_20px_40px_rgba(212,175,55,0.4)] flex flex-col h-full"
     >
       {/* Glow effect on hover */}
       <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
       
       {/* Image Container */}
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className="relative h-40 sm:h-48 md:h-52 w-full overflow-hidden flex-shrink-0">
         <Image
           src={imageUrl}
           alt={item.name}
           fill
           className="object-cover transition-all duration-700 ease-out group-hover:scale-115 group-hover:brightness-110"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          unoptimized
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 33vw, 25vw"
+          quality={85}
+          priority={index < 3}
+          loading={index < 3 ? 'eager' : 'lazy'}
           onError={() => {
             if (!imageError) {
               setImageError(true);
@@ -116,31 +118,31 @@ export default function MenuCard({ item, categoryId, index }: MenuCardProps) {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-red-500/90 px-3 py-1.5 backdrop-blur-sm shadow-lg"
+            className="absolute top-2 sm:top-3 right-2 sm:right-3 flex items-center gap-1 rounded-full bg-red-500/90 px-2 sm:px-3 py-1 sm:py-1.5 backdrop-blur-sm shadow-lg"
           >
-            <Flame className="h-4 w-4 text-white" />
+            <Flame className="h-3 w-3 sm:h-4 sm:w-4 text-white flex-shrink-0" />
             <span className="text-xs font-semibold text-white">Spicy</span>
           </motion.div>
         )}
 
         {/* Item Name Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 transform transition-transform duration-500 group-hover:translate-y-0 translate-y-1">
-          <h3 className="font-display text-xl font-bold text-white drop-shadow-2xl transition-all duration-500 group-hover:text-primary group-hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.8)]">
+        <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 transform transition-transform duration-500 group-hover:translate-y-0 translate-y-1">
+          <h3 className="font-display text-lg sm:text-xl font-bold text-white drop-shadow-2xl transition-all duration-500 group-hover:text-primary group-hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.8)] line-clamp-2">
             {item.name}
           </h3>
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-6 bg-dark-card transition-colors duration-500 group-hover:bg-dark-surface">
+      <div className="flex-1 p-3 sm:p-4 md:p-5 bg-dark-card transition-colors duration-500 group-hover:bg-dark-surface flex flex-col">
         {item.description && (
-          <p className="mb-4 line-clamp-2 text-sm text-dark-muted leading-relaxed transition-colors duration-500 group-hover:text-white/80">
+          <p className="mb-3 sm:mb-4 line-clamp-2 text-xs sm:text-sm text-dark-muted leading-relaxed transition-colors duration-500 group-hover:text-white/80">
             {item.description}
           </p>
         )}
 
         {/* Price Display */}
-        <div className="border-t border-dark-border pt-4">
+        <div className="border-t border-dark-border pt-3 sm:pt-4 mt-auto">
           {priceDisplay && (
             <>
               {priceDisplay.type === "single" && (

@@ -31,15 +31,26 @@ export default function Error({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {/* Error Icon */}
+          {/* Error Icon with Gold Theme */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6, type: "spring" }}
             className="mb-6 flex justify-center"
           >
-            <div className="rounded-full bg-red-500/20 p-6 border border-red-500/30">
-              <AlertCircle className="h-12 w-12 text-red-500" />
+            <motion.div
+              animate={{ 
+                boxShadow: [
+                  "0 0 20px rgba(212, 175, 55, 0.3)",
+                  "0 0 40px rgba(212, 175, 55, 0.6)",
+                  "0 0 20px rgba(212, 175, 55, 0.3)",
+                ]
+              }}
+              transition={{ duration: 3, repeat: Infinity }}
+              className="absolute inset-0 bg-primary/10 rounded-full blur-3xl w-32 h-32"
+            />
+            <div className="relative rounded-full bg-primary/10 p-6 border-2 border-primary">
+              <AlertCircle className="h-12 w-12 text-primary" />
             </div>
           </motion.div>
 
@@ -48,10 +59,19 @@ export default function Error({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="mb-4 font-display text-3xl font-bold text-white md:text-4xl"
+            className="mb-2 bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent font-display text-4xl sm:text-5xl md:text-6xl font-bold"
           >
-            Something went wrong!
+            Oops!
           </motion.h1>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="mb-2 text-xl sm:text-2xl font-semibold text-white"
+          >
+            Something went wrong
+          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}

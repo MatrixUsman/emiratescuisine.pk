@@ -19,30 +19,43 @@ export default function NotFound() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {/* 404 Number */}
-          <motion.h1
+          {/* 404 Number with Enhanced Animation */}
+          <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6, type: "spring" }}
-            className="mb-4 font-display text-9xl font-bold text-primary md:text-[12rem]"
+            className="relative mb-4"
           >
-            404
-          </motion.h1>
+            <motion.div
+              animate={{ 
+                boxShadow: [
+                  "0 0 20px rgba(212, 175, 55, 0.3)",
+                  "0 0 60px rgba(212, 175, 55, 0.5)",
+                  "0 0 20px rgba(212, 175, 55, 0.3)",
+                ]
+              }}
+              transition={{ duration: 4, repeat: Infinity }}
+              className="absolute -inset-10 bg-primary/20 rounded-2xl blur-2xl"
+            />
+            <h1 className="relative font-display text-9xl font-bold bg-gradient-to-b from-primary via-primary-light to-primary bg-clip-text text-transparent md:text-[12rem]">
+              404
+            </h1>
+          </motion.div>
 
           {/* Error Message */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="mb-4 font-display text-3xl font-bold text-white md:text-4xl"
+            className="mb-2 font-display text-3xl font-bold text-white md:text-4xl"
           >
             Page Not Found
           </motion.h2>
-
+          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
             className="mb-8 text-lg text-dark-muted"
           >
             The page you&apos;re looking for doesn&apos;t exist or has been moved.

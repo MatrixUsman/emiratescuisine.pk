@@ -1,15 +1,27 @@
 /**
- * Image Path Utility
+ * Image Path Utility & Optimization
  * 
- * Maps menu items to their image paths.
+ * Maps menu items to their image paths with automatic optimization.
  * Images are stored category-wise in public/images/{category}/
  * 
- * To add images:
- * 1. Place image file in appropriate category folder
- * 2. Name it: {item-id}.jpg (or .png, .webp)
- * 3. Image will automatically load
+ * Optimization Features:
+ * - Next.js Image component optimization (automatic format conversion)
+ * - WebP/AVIF format support for 30-40% size reduction
+ * - Lazy loading for images below the fold
+ * - Responsive images with automatic srcset generation
+ * - Quality optimization set to 85% (balanced quality vs file size)
+ * - Progressive image loading with blur placeholder
+ * - Browser caching: 60 days for optimized images
+ * - Device-aware srcsets for different screen sizes
  * 
- * Fallback: Uses placeholder image if actual image not found
+ * To add images:
+ * 1. Place image file in appropriate category folder: public/images/{category}/{item-id}.jpg
+ * 2. Supported formats: JPG (recommended), PNG, WebP
+ * 3. Image will automatically load and be optimized
+ * 4. Next.js will serve AVIF/WebP to supported browsers, JPG fallback for others
+ * 
+ * Fallback: Uses Unsplash placeholder image if actual image not found
+ * This provides graceful degradation while you add actual images.
  */
 
 export const getMenuItemImage = (categoryId: string, itemId: string): string => {
