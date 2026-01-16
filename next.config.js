@@ -17,6 +17,8 @@ const nextConfig = {
         deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
         // Image container sizes for responsive srcset generation
         imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+        // Allowed quality presets for Next.js 16 requirement (Header uses 95, cards use 85)
+        qualities: [75, 85, 95],
         // Cache optimized images for 60 days in production
         minimumCacheTTL: 60 * 60 * 24 * 60,
         // Allow external images from Unsplash
