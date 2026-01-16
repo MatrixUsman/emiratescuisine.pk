@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
     images: {
         // Enable Next.js Image optimization for automatic format conversion
-        unoptimized: true,
+        unoptimized: false,
         // Support modern formats: AVIF (best compression), WebP (good compression)
         formats: ["image/avif", "image/webp"],
         // Device breakpoints for responsive images
