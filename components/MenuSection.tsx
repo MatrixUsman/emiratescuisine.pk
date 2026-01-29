@@ -15,8 +15,8 @@ export default function MenuSection() {
     : categories;
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-dark-bg">
-      <div className="container mx-auto px-safe">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-dark-bg">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function MenuSection() {
         </motion.div>
 
         {/* Category Filter */}
-        <div className="mb-12 sm:mb-14 md:mb-16 flex flex-wrap justify-center gap-2 sm:gap-3 px-4 sm:px-0">
+        <div className="mb-8 sm:mb-10 md:mb-12 flex flex-wrap justify-center gap-2 sm:gap-3 px-2 sm:px-0">
           <motion.button
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -89,7 +89,7 @@ export default function MenuSection() {
         </div>
 
         {/* Menu Categories */}
-        <div className="space-y-12 sm:space-y-14 md:space-y-16 lg:space-y-20">
+        <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
           {filteredCategories.map((category) => (
             <motion.div
               key={category.id}
@@ -100,7 +100,7 @@ export default function MenuSection() {
               className="motion-section-header scroll-mt-24"
               id={category.id}
             >
-              <div className="mb-6 sm:mb-8 md:mb-10 px-4 sm:px-0">
+              <div className="mb-4 sm:mb-6 md:mb-8 px-1 sm:px-0">
                 <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2">
                   {category.name}
                 </h3>
@@ -110,7 +110,7 @@ export default function MenuSection() {
                   </p>
                 )}
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-safe">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
                 {category.items.map((item, index) => (
                   <MenuCard
                     key={item.id}
